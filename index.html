@@ -142,7 +142,7 @@ footer a{color:#fff}
 </style>
 </head>
 <body>
-<div class="proto">Lista de precios 2026 · exclusiva para distribuidores · 551 productos con fotos y fichas técnicas</div>
+<div class="proto">Lista de precios 2026 · exclusiva para distribuidores · 551 productos con fotos y fichas técnicas<span id="visitas" style="display:none"> · 👁 <b id="vn"></b> visitas</span></div>
 <div class="promo">🎁 Descuento por volumen: +5% en compras &gt; US$ 500 · +10% en compras &gt; US$ 3,000</div>
 <header>
  <div class="hwrap">
@@ -334,6 +334,9 @@ $('q').addEventListener('input',()=>{renderCats();renderGrid()});
 ['brand','sort','onlyStock'].forEach(id=>$(id).addEventListener('input',renderGrid));
 all();
 
+</script>
+<script>
+(function(){try{fetch('https://script.google.com/macros/s/AKfycbwxZDk9O0xM9mANOkP9IMK9PXJDQ3tF0KkgJ4hkVAsb_nglOAxiEa3aOCvWtH49nZy9nw/exec').then(function(r){return r.json()}).then(function(d){if(d&&d.visitas){document.getElementById('vn').textContent=Number(d.visitas).toLocaleString('es-PE');document.getElementById('visitas').style.display='inline'}}).catch(function(){})}catch(e){}})();
 </script>
 </body>
 </html>
